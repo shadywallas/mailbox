@@ -14,7 +14,7 @@ class MailBox extends Controller
      */
     public function index()
     {
-        return Messages::whereNull('archived_at')->paginate(1);
+        return Messages::whereNull('archived_at')->paginate(5);
     }
     /**
      * Display a listing  of archived  resource.
@@ -23,7 +23,7 @@ class MailBox extends Controller
      */
     public function archived()
     {
-        return Messages::whereNotNull('archived_at')->paginate(1);
+        return Messages::whereNotNull('archived_at')->paginate(5);
     }
 
 
