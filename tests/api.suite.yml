@@ -1,0 +1,11 @@
+class_name: ApiTester
+modules:
+    enabled:
+        - Helper\Api
+        - Asserts
+        - REST:
+            url: /api
+            depends: Laravel5
+        - Laravel5:
+            environment_file: .env.testing
+            run_database_migrations: true
